@@ -1,0 +1,101 @@
+.firstview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   height: 100vh;
+    background-color: #e5ebf5;
+}
+
+.firstview-text {
+   display: flex;
+   gap: 10px;
+
+}
+.firstview button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.firstview-service {
+  font-weight: bold;
+}
+.firstview-service button{
+    height: 50px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #21a0f6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* ---- FORM POPUP ---- */
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 14, 14, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.form-container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  text-align: center;
+  animation: popIn 0.3s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-container input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.form-container button {
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-container button[type='submit'] {
+  background-color: #00adb5;
+  color: white;
+}
+
+.form-container .close-btn {
+  background-color: #ccc;
+  margin-top: 10px;
+}
+
+.form-container .close-btn:hover {
+  background-color: #999;
+}
