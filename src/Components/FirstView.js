@@ -10,7 +10,7 @@ function FirstView() {
     <div className='firstview'>
       <div className='firstview-text'>
         <button onClick={() => setShowForm(true)}>Create Account</button>
-        <button>About Us</button>
+        <button onClick={() => navigate('/about')}>About Us</button>
       </div>
 
       <div className='firstview-service'>

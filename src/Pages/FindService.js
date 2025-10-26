@@ -9,12 +9,14 @@ function FindService() {
 
   // Sample data
   const internetProviders = [
-    { country: 'Bangladesh', city: 'Dhaka', area: 'Uttara Sector 8', name: 'Link3', speed: '100 Mbps', price: '৳1200/month' },
-    { country: 'Bangladesh', city: 'Dhaka', area: 'Uttara Sector 8', name: 'Amber IT', speed: '50 Mbps', price: '৳900/month' },
-    { country: 'Bangladesh', city: 'Dhaka', area: 'Banani', name: 'MetroNet', speed: '80 Mbps', price: '৳1000/month' },
-    { country: 'Bangladesh', city: 'Chattogram', area: 'Agrabad', name: 'Carnival', speed: '60 Mbps', price: '৳850/month' },
-  ];
-
+      { country: 'Bangladesh', city: 'Dhaka', area: 'Banani', name: 'MetroNet', speed: '80 Mbps', price: '৳1000/month', phone: '+8801712345680', website: 'www.metrone.com' },
+    { country: 'Bangladesh', city: 'Chattogram', area: 'Agrabad', name: 'Carnival', speed: '60 Mbps', price: '৳850/month', phone: '+8801712345681', website: 'www.carnival.com' },
+    { country: 'Bangladesh', city: 'Dhaka', area: 'Gulshan', name: 'Link3', speed: '100 Mbps', price: '৳1200/month', phone: '+8801712345682', website: 'www.link3.com' },
+    { country: 'Bangladesh', city: 'Chattogram', area: 'Pahartali', name: 'Amber IT', speed: '50 Mbps', price: '৳900/month', phone: '+8801712345683', website: 'www.amberit.com' },
+    { country: 'Bangladesh', city: 'Dhaka', area: 'Uttara Sector 8', name: 'MetroNet', speed: '80 Mbps', price: '৳1000/month', phone: '+8801712345678', website: 'www.metrone.com' },
+  { country: 'Bangladesh', city: 'Dhaka', area: 'Uttara Sector 8', name: 'Link3', speed: '100 Mbps', price: '৳1200/month', phone: '+8801712345679', website: 'www.link3.com' },
+    { country: 'Bangladesh', city: 'Dhaka', area: 'Uttara Sector 8', name: 'Amber IT', speed: '50 Mbps', price: '৳900/month', phone: '+8801712345679', website: 'www.amberit.com' },
+  ]
   // Country → City → Area structure
   const dataMap = {
     Bangladesh: {
@@ -79,6 +81,9 @@ function FindService() {
           results.map((provider, index) => (
             <div className='result-card' key={index}>
               <h3>{provider.name}</h3>
+              <p><strong>Phone:</strong> {provider.phone}</p>
+              <p><strong>Website:</strong> <a href={`http://${provider.website}`} target='_blank' rel='noopener noreferrer'>{provider.website}</a></p>
+              <p><strong>Location:</strong> {provider.area}, {provider.city}, {provider.country}</p>
               <p><strong>Speed:</strong> {provider.speed}</p>
               <p><strong>Price:</strong> {provider.price}</p>
               <p>📍 {provider.area}, {provider.city}, {provider.country}</p>
